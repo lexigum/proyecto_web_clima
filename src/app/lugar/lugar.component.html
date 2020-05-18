@@ -1,0 +1,23 @@
+<div *ngIf="!carga">
+    <div class="row mb-3">
+    <div class="text-white col-xs-12 col-sm-12 col-md-12 col-lg-12 m-4">
+        Estamos localizando su ciudad, por favor espere...
+    </div>
+</div>
+</div>
+<div class="container" *ngIf="carga">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="card text-white bg-warning">
+                <div class="card-body">
+                  <h5 class="card-title text-md-center text-lg-center">Usted nos visita de: </h5>
+                  <h6 class="card-subtitle mb-2 text-muted text-md-center text-lg-center">{{infoCiudad.city}}, {{infoCiudad.region}} en {{infoCiudad.country_name}}</h6>
+                  <p class="card-text text-md-center text-lg-center">
+                    Hora local de {{infoCiudad.city}}: {{tiempo}}
+                  </p>
+                </div>
+            </div>
+        </div>
+    </div>               
+</div>
+
